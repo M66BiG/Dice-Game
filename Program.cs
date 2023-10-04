@@ -15,8 +15,8 @@ internal class Program
             Console.ReadKey(true);
 
 
-            int player = dice.Next(1, 6);
-            int enemy = dice.Next(1, 6);
+            int player = dice.Next(1, 7);
+            int enemy = dice.Next(1, 7);
 
             Console.WriteLine($"Du hast {player} gewürfelt. Dein Gegner hat {enemy} gewürfelt.");
             if (player > enemy) 
@@ -49,7 +49,9 @@ internal class Program
                     fail = true;
                 }
             }
-            if (fail) {break; }
+            Thread.Sleep(1000);
+            if (fail) { break; }
+            
         }
     }
 }
